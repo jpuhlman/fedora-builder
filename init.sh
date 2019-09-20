@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -n "$EXTRA_PACKAGES" ] ; then
+   yum install -y $EXTRA_PACKAGES
+fi
+
 groupadd -g $USERGID engr 
 useradd -d $HOME -M -u $USERID -g $USERGID $USERNAME
 echo "$USERNAME  ALL=(ALL)       NOPASSWD: ALL" | tee -a /etc/sudoers > /dev/null
