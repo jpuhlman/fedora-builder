@@ -18,7 +18,7 @@ fi
 
 echo "export MOCK_OPTS='--old-chroot'" >> /etc/bashrc
 echo
-echo "Welcome to fedora 30 builder"
+echo "Welcome to $RELEASE_DISTRO $RELEASE_VERSION builder"
 echo
 su - $USERNAME
 
