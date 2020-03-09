@@ -17,6 +17,7 @@ if [ -e "/var/run/docker.sock" ] ; then
 fi
 
 echo "export MOCK_OPTS='--old-chroot'" >> /etc/bashrc
+echo "export LANG='$LANG'" >> /etc/bashrc
 echo
 echo "Welcome to $RELEASE_DISTRO $RELEASE_VERSION builder"
 echo
@@ -27,7 +28,7 @@ if [ -n "$SCRIPTRUNNER" ] ; then
       cd $HOME
    fi
    chmod 755 $SCRIPTRUNNER
-   sudo --preserve-env="CURRENTPATH" -u $USERNAME $SCRIPTRUNNER
+   sudo --preserve-env="CURRENTPATH LANG" -u $USERNAME $SCRIPTRUNNER
 else 
    su - $USERNAME
 fi
