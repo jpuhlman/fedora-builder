@@ -11,7 +11,7 @@ RUN yum install -y sudo \
     docker \
     wget \
     chrpath \
-    gcc-g++ \
+    gcc-c++ \
     hostname \
     rpcgen \
     perl-Thread-Queue \
