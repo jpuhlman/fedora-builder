@@ -8,7 +8,7 @@ RUN yum install -y sudo \
     screen \
     python \
     python2 \
-    docker \
+    qemu-user-static \
     wget \
     chrpath \
     gcc-g++ \
