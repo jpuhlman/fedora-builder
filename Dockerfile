@@ -1,4 +1,4 @@
-FROM fedora:30
+FROM fedora:38
 RUN yum -y update
 RUN yum groupinstall -y "Development Tools"
 RUN yum install -y sudo \
@@ -19,6 +19,6 @@ RUN yum install -y sudo \
     python3-langtable
 COPY init.sh /
 ENV RELEASE_DISTRO fedora
-ENV RELEASE_VERSION 30 
+ENV RELEASE_VERSION 38
 ENV LANG en_US.UTF-8
 CMD  bash /init.sh
