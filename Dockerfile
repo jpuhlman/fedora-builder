@@ -12,6 +12,8 @@ RUN yum install -y sudo \
     wget \
     chrpath \
     gcc-c++ \
+    spectool \
+    fedpkg \
     hostname \
     rpcgen \
     perl-Thread-Queue \
